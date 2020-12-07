@@ -3,20 +3,43 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>PredWeather</title>
     <link rel="stylesheet" href="./dist/js/style.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat:wght@400;700&family=Raleway&display=swap"
-      rel="stylesheet"
+      href="data:image/x-icon;base64,AAABAAEAEBAQAAAAAAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA/4QAAP///wAA0P8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEREREREREAEAAAAAAAAQACIiIiIiIgACIiIiIiIiIAIiIiIiIiIgAiIiIiIiIiAAIiIiIiIiAAEAACIiIAAwAREQIiIgMzABERECIgMzMAERERAAMzMwAREREDMzMzABERERAzMzAAEREREQAAAQAAAAAAAAAACAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAQAA"
+      rel="icon"
+      type="image/x-icon"
     />
-
-    <script
-      src="https://kit.fontawesome.com/98fe6b9977.js"
-      crossorigin="anonymous"
-    ></script>
   </head>
   <body>
-    <root> </root>
+    <root>
+      <div class="main__page">
+        <div class="header">
+          <div class="header__container">
+            <div class="header__container__text">PredWeather</div>
+            <div class="header__container__middle">
+              <div class="header__container__middle__text">
+                Search your city:
+              </div>
+              <input
+                placeholder="Minsk"
+                class="header__container__middle__input"
+              ></input>
+              <div class="header__container__middle__btn">
+                <span class="header__container__middle__btn__text">Search</span>
+              </div>
+              <span class="header__container__middle__error hide">You entered the wrong city!</span>
+            </div>
+            <div class="header__container__right">
+              <div class="header__container__right__time">
+                Время в Минске 19:21 ч. 7 декабря 2020
+              </div>
+              <div class="header__container__right__utc">Время UTC 16:21ч</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </root>
     <script src="./dist/js/bundle.js"></script>
   </body>
 </html>

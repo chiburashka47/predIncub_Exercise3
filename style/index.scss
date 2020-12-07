@@ -1,5 +1,4 @@
 body {
-  height: 200vh;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -24,4 +23,97 @@ a {
 
 input {
   outline: none;
+}
+
+@mixin flex_col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex_row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.main__page {
+  width: 100%;
+
+  @include flex_col();
+  .header {
+    width: 100%;
+    height: 80px;
+    background-color: #12b0d8;
+    color: white;
+
+    &__container {
+      @include flex_row();
+      justify-content: space-between;
+      height: 100%;
+      padding: 0 40px;
+
+      &__text {
+        font-size: 22px;
+      }
+
+      &__middle {
+        @include flex_row();
+        position: relative;
+
+        &__text {
+          text-align: center;
+        }
+
+        &__input {
+          margin-left: 5px;
+          margin-top: 5px;
+        }
+
+        &__error {
+          color: red;
+          position: absolute;
+          top: 22px;
+          left: 122px;
+          font-size: 13px;
+        }
+        .hide {
+          opacity: 0;
+        }
+
+        &__btn {
+          cursor: pointer;
+          margin-left: 15px;
+          background-color: #0576aa;
+          border-radius: 4px;
+          padding: 0px 5px;
+          display: flex;
+          align-items: center;
+          margin-top: 5px;
+
+          &:hover {
+            background-color: #00628f;
+          }
+        }
+      }
+
+      &__right {
+        @include flex_col();
+        font-size: 12px;
+        align-items: baseline;
+        border-left: 1px solid white;
+        padding-left: 10px;
+
+        &__time {
+          padding: 0;
+        }
+
+        &__utc {
+          padding: 0;
+        }
+      }
+    }
+  }
 }
