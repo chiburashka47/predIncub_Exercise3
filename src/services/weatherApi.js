@@ -6,10 +6,10 @@ export const getCurrentWeather = async (city) => {
   if (!res.ok) {
     return false;
 
-    throw new Error(
-      `Could not fetch http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=2082dd87628414a076525dc85ad4f71f` +
-        `, received ${res.status}`
-    );
+    // throw new Error(
+    //   `Could not fetch http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=2082dd87628414a076525dc85ad4f71f` +
+    //     `, received ${res.status}`
+    // );
   }
   return await res.json();
 };

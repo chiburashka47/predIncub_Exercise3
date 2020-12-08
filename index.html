@@ -22,6 +22,7 @@
                 Search your city:
               </div>
               <input
+              type="text"
                 placeholder="Minsk"
                 class="header__container__middle__input"
               ></input>
@@ -35,6 +36,59 @@
                 Время в Минске 19:21 ч. 7 декабря 2020
               </div>
               <div class="header__container__right__utc">Время UTC 16:21ч</div>
+            </div>
+          </div>
+        </div>
+        <div class="weather">
+          <div class="weather__title">Weather in Minsk</div>
+          <div class="weather__container">
+            <div class="weather__container__navigation">
+              <div id="oneday" class="weather__container__navigation__elem active">Today</div>
+              <div id="fivedays"  class="weather__container__navigation__elem">Five days</div>
+            </div>
+            <div class="weather__container__oneday ">
+              <div class="weather__container__oneday__left">
+                <div class="weather__container__oneday__left__text">broken clouds</div>
+                <img class="weather__container__oneday__left__img"></img>
+               
+              </div>
+              <div class="weather__container__oneday__middle">
+                <div class="weather__container__oneday__row">
+                  <div class="weather__container__oneday__row__text">Temperature:</div>
+                  <div id="oneDayTemp" class="weather__container__oneday__row__value">287 F</div>
+                </div>
+                <div class="weather__container__oneday__row">
+                  <div class="weather__container__oneday__row__text">Feels like:</div>
+                  <div id="oneDayFilsLike" class="weather__container__oneday__row__value">287 F</div>
+                </div>
+              </div>
+              <div class="weather__container__oneday__right">
+                <div class="weather__container__oneday__row">
+                  <div class="weather__container__oneday__row__text">Humidity:</div>
+                  <div id="oneDayHumidity" class="weather__container__oneday__row__value">100%</div>
+                </div>
+                <div class="weather__container__oneday__row">
+                  <div class="weather__container__oneday__row__text">Pressure:</div>
+                  <div id="oneDayPressure" class="weather__container__oneday__row__value">1015</div>
+                </div>
+                <div class="weather__container__oneday__row">
+                  <div class="weather__container__oneday__row__text">Wind:</div>
+                  <div id="oneDayWindSpeed" class="weather__container__oneday__row__value">12 m/s</div>
+                  <div id="oneDayWindDirection" class="weather__container__oneday__row__value">wes-soug</div>
+                </div>
+              </div>
+            </div>
+            <div class="weather__container__fivedays hide">
+              <div class="weather__container__fivedays__navbar ">
+                <div class="weather__container__fivedays__navbar__date">Date</div>
+                <div class="weather__container__fivedays__navbar__temp">Temperature, °F</div>
+                <div class="weather__container__fivedays__navbar__feels">Feels like, °F</div>
+                <div class="weather__container__fivedays__navbar__weather">Cloudiness, weather and precipitation</div>
+                <div class="weather__container__fivedays__navbar__wind">Wind speed and direction, m/s</div>
+                <div class="weather__container__fivedays__navbar__pressure">Pressure, gPa</div>
+                <div class="weather__container__fivedays__navbar__humidity">Humidity, %</div>
+              </div>
+              
             </div>
           </div>
         </div>

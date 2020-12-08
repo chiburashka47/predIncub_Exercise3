@@ -1,3 +1,7 @@
+html {
+  background-color: #e4e4e4;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -37,6 +41,15 @@ input {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+
+@mixin table_elem {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  border-right: 1px solid #cccccc;
 }
 
 .main__page {
@@ -113,6 +126,210 @@ input {
         &__utc {
           padding: 0;
         }
+      }
+    }
+  }
+
+  .weather {
+    width: 60%;
+    @include flex_col();
+    align-items: baseline;
+
+    &__title {
+      padding: 15px 0;
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    &__container {
+      width: 100%;
+      position: relative;
+      @include flex_col();
+      background-color: #ffffff;
+      border-radius: 8px;
+
+      &__navigation {
+        @include flex_row();
+        height: 40px;
+        align-items: flex-end;
+        width: 100%;
+
+        &__elem {
+          height: 100%;
+          width: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border: 3px solid #e4e4e4;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+
+        .active {
+          border: none;
+        }
+      }
+
+      &__oneday {
+        @include flex_row();
+        align-items: baseline;
+        justify-content: flex-start;
+        width: 100%;
+
+        &__left {
+          @include flex_col();
+          width: 20%;
+
+          align-items: baseline;
+          padding: 20px 0px 20px 30px;
+
+          &__text {
+            cursor: default;
+            font-weight: 500;
+          }
+
+          &__img {
+            width: 60%;
+          }
+        }
+
+        &__middle {
+          @include flex_col();
+          align-items: baseline;
+          padding-left: 30px;
+          width: 40%;
+        }
+
+        &__right {
+          @include flex_col();
+          align-items: baseline;
+        }
+
+        &__row {
+          @include flex_row();
+          font-weight: 500;
+          padding: 5px 0;
+          cursor: default;
+
+          &__text {
+            padding: 0;
+          }
+
+          &__value {
+            margin-left: 5px;
+          }
+        }
+      }
+
+      &__fivedays {
+        @include flex_col();
+        width: 100%;
+        padding-bottom: 20px;
+        cursor: default;
+
+        &__navbar {
+          @include flex_row();
+          width: 100%;
+          font-size: 12px;
+          justify-content: flex-start;
+          border-bottom: 1px solid #cccccc;
+          border-top: 1px solid #cccccc;
+
+          &__date {
+            width: 7%;
+            @include table_elem();
+          }
+
+          &__temp {
+            width: 12%;
+            @include table_elem();
+          }
+
+          &__feels {
+            width: 12%;
+            @include table_elem();
+          }
+
+          &__weather {
+            width: 25%;
+            @include table_elem();
+          }
+
+          &__wind {
+            width: 20%;
+            @include table_elem();
+          }
+
+          &__pressure {
+            width: 12%;
+            @include table_elem();
+          }
+
+          &__humidity {
+            width: 12%;
+            @include table_elem();
+            border-right: none;
+          }
+        }
+
+        &__row {
+          @include flex_row();
+          width: 100%;
+          font-size: 14px;
+          justify-content: flex-start;
+          border-bottom: 1px solid #cccccc;
+          height: 40px;
+
+          &__date {
+            width: 7%;
+            font-size: 12px;
+            @include table_elem();
+          }
+
+          &__temp {
+            width: 12%;
+            @include table_elem();
+          }
+
+          &__feels {
+            width: 12%;
+            @include table_elem();
+          }
+
+          &__container {
+            width: 9%;
+            @include table_elem();
+
+            &__img {
+              width: 80%;
+            }
+          }
+
+          &__desc {
+            width: 16%;
+            @include table_elem();
+          }
+
+          &__wind {
+            width: 20%;
+            @include table_elem();
+          }
+
+          &__pressure {
+            width: 12%;
+            @include table_elem();
+          }
+
+          &__humidity {
+            width: 12%;
+            @include table_elem();
+            border-right: none;
+          }
+        }
+      }
+
+      .hide {
+        display: none;
       }
     }
   }
